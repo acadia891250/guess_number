@@ -31,12 +31,25 @@
     <h1>Guess Number</h1>
     <input type="text" id="num">
     <button id="btn">Guess</button>
+    <p id="feedback"></p>
 
     <script>
+        ans = Math.round((Math.random()*100)+1);
         const num = document.getElementById("num");
         const btn = document.getElementById("btn");
+        feedback = document.getElementById("feedback");
         btn.addEventListener('click',function(e){
-            console.log(num.value);
+            console.log(ans);
+            
+            if(num.value < ans){
+                alert("太小了");
+                feedback
+            }else if(num.value > ans){
+                alert("太大了");
+            }else{
+                alert("正確");
+            }
+            
         });
     </script>
 </body>
