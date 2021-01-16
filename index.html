@@ -35,16 +35,16 @@
 
     <script>
         ans = Math.round((Math.random()*100)+1);
-        num = document.getElementById("num").value;
+        num = document.getElementById("num");
         const btn = document.getElementById("btn");
         feedback = document.getElementById("feedback");
         btn.addEventListener('click',function(e){
             console.log(ans);
-            console.log(num);
             
-            if(num > ans){
+            
+            if(num.value > ans){
                 feedback.innerText = "太大了";
-            }else if(num < ans){
+            }else if(num.value < ans){
                 feedback.innerText = "太小了";
             }else{
                 feedback.innerText = "正確";
