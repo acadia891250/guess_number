@@ -74,7 +74,14 @@
                     timer: 1500
                 })
             }else{
-                feedback.innerText = "正確";
+                // feedback.innerText = "正確";
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: '正確',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
             }
             
         });
